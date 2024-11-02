@@ -1,0 +1,92 @@
+body {
+  font-size: 16px;
+  padding: 10px;
+  background-color: hsl(38 100% 90%);
+  max-width: 100%;
+  margin: 0;
+}
+
+.picture {
+  max-width: 100%;
+  height: auto;
+}
+.main-box {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.content {
+  display: grid;
+  gap: 1em;
+  width: 100%;
+}
+
+.preparation,
+.ingredients,
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.preparation {
+  background-color: hsl(330, 100%, 98%);
+}
+.preparation h2 {
+  color: hsl(332, 51%, 32%);
+}
+
+ul li::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+.ingredients,
+.instructions {
+  border-bottom: 1px solid hsl(14, 45%, 36%);
+  padding-bottom: 10px;
+}
+
+.ingredients h3,
+.instructions h3,
+.nutrition h3 {
+  color: hsl(14, 45%, 36%);
+}
+
+ol li::marker {
+  color: hsl(14, 45%, 36%);
+}
+
+.nutrition-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.nutrition-item:last-child {
+  border-bottom: none;
+}
+
+.nutrition-value {
+  color: hsl(332, 51%, 32%);
+}
+
+@media (min-width: 768px) {
+  .main-box {
+    flex-direction: row;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+}
